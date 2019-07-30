@@ -1,0 +1,119 @@
+{% extends 'base.html' %}
+{% block title %}
+    <title>Developer</title>
+{% endblock %}
+{% block contents %}
+{% load staticfiles %}
+
+<div >
+
+    
+    <div style="text-align:center; font-size:2rem; font-family:sans-serif; padding:4rem;">
+        개발자 소개
+    </div>
+<div class="row">
+    <div class="col s6 m7">
+      <div class="card">
+        <div class="card-image">
+          <img class="dev_img" src= "{% static 'img/gyuhwan.jpeg' %}" alt="">
+            <span style="font-family: sans-serif; font-weight: 1000;" class="card-title">황규환</span>
+        </div>
+      </div>
+    </div>
+    <div class="col s6 m7">
+      <div class="card">
+        <div class="card-image">
+          <img class="dev_img" src= "{% static 'img/jun.jpeg' %}" alt="">
+                        <span style="font-family: sans-serif; font-weight: 1000;"  class="card-title">안현준</span>
+
+        </div>
+      </div>
+    </div>
+  </div>
+<div class="row">
+    <div class="col s6 m7">
+      <div class="card">
+        <div class="card-image">
+          <img class="dev_img" src= "{% static 'img/mirim.png' %}" alt="">
+                <span style="padding-left:3rem;font-family: sans-serif; font-weight: 1000;" class="card-title">이미림</span>
+
+        </div>
+      </div>
+    </div>
+
+    <div class="col s6 m7">
+      <div class="card">
+        <div class="card-image">
+          <img class="dev_img" src= "{% static 'img/wookyung.jpeg' %}" alt="">
+                    <span style="font-family: sans-serif; font-weight: 1000;" class="card-title">김우경</span>
+
+        </div>
+      </div>
+    </div>
+</div>
+<div class="row">
+
+    <div class="col s6 m7">
+      <div class="card">
+        <div class="card-image">
+          <img class="dev_img" src= "{% static 'img/jungmin.jpeg' %}" alt="">
+                        <span style="font-family: sans-serif; font-weight: 1000;" class="card-title">최정민</span>
+
+        </div>
+      </div>
+    </div>
+    
+    
+    
+
+
+    <div class="col s6 m7">
+      <div class="card">
+        <div class="card-image">
+          <img class="dev_img" src= "{% static 'img/wonjun.jpeg' %}" alt="">
+                            <span style="font-family: sans-serif; font-weight: 1000;" class="card-title">조원준</span>
+
+        </div>
+      </div>
+    </div>
+</div>
+<div class="row">
+
+    <div class="col s6 m7">
+      <div class="card">
+        <div class="card-image">
+          <img class="dev_img" src= "{% static 'img/solmin.jpeg' %}" alt="">
+                    <span style="font-family: sans-serif; font-weight: 1000;" class="card-title">박솔민</span>
+
+        </div>
+      </div>
+    </div>
+    <div class="col s6 m7">
+      <div class="card">
+        <div class="card-image">
+          <img class="dev_img" src= "{% static 'img/taewan.jpeg' %}" alt="">
+                    <span style="font-family: sans-serif; font-weight: 1000;" class="card-title">김태완</span>
+
+        </div>
+      </div>
+    </div>
+</div>
+
+</div>
+
+<br><br><br><br><br>
+{% endblock %}
+
+<style>
+    .dev_con{
+        width:100%;
+    }
+    .dev_img{
+        width:25%;
+        display:inline-block;
+    }
+    
+    
+    
+    
+</style>

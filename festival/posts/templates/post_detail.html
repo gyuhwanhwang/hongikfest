@@ -1,0 +1,75 @@
+{% extends 'base.html' %}
+{% block title %}
+    <title>{{post.creator}}님의 게시글</title>
+{% endblock %}
+{% block contents %}
+<style>
+input:focus {
+  border-bottom: 1px solid #E91E63 !important;
+  box-shadow: 0 1px 0 0 #E91E63 !important;
+}
+label.active {
+  color: #E91E63;
+}
+</style>
+<!--   메시지-->
+    
+
+<div style="padding:1rem;">
+  <br>
+  <ul class="collection">
+    <li class="collection-item avatar">
+      <a href="{% url 'users:userpage' post.creator.id %}">
+          <img src="{{ post.creator.profile_image.url }}" alt="" class="circle">
+      </a>
+      <span class="title" style="font-size:20px;"><b>{{post.title}}</b></span>
+      <h6>{{post.creator.username}}</h6><br>
+      <p>{{post.text}}</p> <br>
+      {% if post.creator.gender == 'female' %}
+      <p class="secondary-content" style="color:#E91E63;">여자</p>
+      {% elif post.creator.gender == 'male' %}
+      <p class="secondary-content" style="color:#E91E63;">남자</p>
+      {% endif %}
+    </li>
+  </ul>
+{% if post.creator == user %}
+    <a class="right waves-effect waves-light btn-small title_sub pink" href="{% url 'posts:delete' post.id%}">삭제</a>
+{% endif %}
+<div class="row">
+</div>  
+    <!--   글쓰기-->
+    <div class='comment'>
+        <div class="s-comment-title">댓글 쓰기:</div>
+        <form method="POST" action="{% url 'posts:post_comment_create' post.id %}">
+            {% csrf_token %}
+            <div class="confirm" >
+                <input type="text", name="message", placeholder="댓글을 입력해주세요.">
+                <div class="col s12">
+                 <button class="btn waves-effect waves-light pink submit_btn_2 right" type="submit" value="댓글달기">
+                     <b>등록</b>
+                 </button>
+                </div> 
+            </div>
+        </form> 
+    <br>
+    <div class="row">
+    </div>
+    {% for comment in comments %}
+    <div class="reply_done">
+     <ul class="collection" style="border-color:white;">
+        <li class="collection-item avatar">
+          <a href="{% url 'users:userpage' comment.creator.id %}">
+              <img src="{{ comment.creator.profile_image.url }}" alt="" class="circle">
+          </a>
+          <span class="title">{{comment.creator.username}}</span>
+          <p>{{comment.message}}</p>
+          <p style="font-size:11px; text-align:right">{{comment.created_at}}</p>
+        </li>
+      </ul>
+    </div> 
+    {% endfor %}
+</div>
+    
+    </div>
+<br><br><br><br><br><br><br><br>
+{% endblock %} 

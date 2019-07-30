@@ -1,0 +1,164 @@
+*{
+    padding: 0;
+    border: 0;
+    margin: 0;
+}
+
+.brand-logo img{
+    width: 30vw;
+}
+
+
+/*모바일부터 했습니다!-현준*/
+@media(max-width: 600px){
+    
+    
+    .brand-logo img{width: 60vw;}
+    .collection{}
+    .collection-item{margin: 5% 5%;}
+    
+    #materialize-overrides .title_sub{
+    border-radius: 80px;
+    padding: 0 5vw;
+    margin: 3vw 0 3vw 2vw;
+    }    
+
+    #materialize-overrides .title{
+    margin-top: 5vw;
+    }    
+    .secondary-content{
+/*    font-size: 1em;*/
+    }
+    
+    #materialize-overrides .pagination{
+    /* margin-top: 15vw;         */
+    }
+    
+    #materialize-overrides .material-icons{
+        margin-top: 1vw;
+        font-size: 26px;
+    }
+    
+    #materialize-overrides .cancel{
+        margin-left: 49vw;
+    }
+    
+    #materialize-overrides .heart{
+        margin-left: 12vw;
+    }
+    
+/*    message_detail*/
+    #materialize-overrides .problem{
+        margin-left: 53vw;
+    }
+    #materialize-overrides .delete{
+        margin-left: 46vw;
+    }
+    
+/*    index*/
+    #materialize-overrides .index{
+        height: 30vh;
+        margin-bottom: 0;
+        padding: 0;
+        background-position: center center;
+        background-size: contain;
+        background-repeat: no-repeat;
+    }
+    #materialize-overrides .bgi{background-image:url(./img/index_1.png);}
+    #materialize-overrides .bgi2{background-image:url(./img/index_2.png);}
+    #materialize-overrides .bgi3{background-image:url(./img/index_3.png);}
+    #materialize-overrides .bgi4{background-image:url(./img/index_4.png);}
+    
+    #materialize-overrides .footer_footer{
+        height: 10vh;
+        margin-top: 0;
+        margin-bottom: 0;
+        color: red;
+        background-image: url(./img/navbar_black.png)
+    }
+/*login로그인    */
+    #materialize-overrides .login{
+        background-image:url(./img/login_2.png);
+        background-repeat: no-repeat;
+        background-size: cover;
+        height: 100vh;
+        margin-top: 0;
+        margin-bottom: 0;
+    }
+    
+/*signup 회원가입    */
+    #materialize-overrides .signup{
+        padding: 0 20vw;
+        margin: 0 20vw;
+    }
+/*done 완료되었습니다    */
+    #materialize-overrides .done{
+        background-image:url(./img/done.png);
+        background-repeat: no-repeat;
+        background-size: cover;
+        height: 100vh;
+        margin-top: 0;
+        margin-bottom: 0;
+    }    
+/*미팅게시글    */
+    #materialize-overrides .problem_2{
+        margin-left: 47vw;
+    }
+    #materialize-overrides .submit_btn{
+        margin-top: 5vw;
+    }
+/*미팅게시글쓰기    */
+    #materialize-overrides .submit_btn_2{
+        
+        border-radius: 40vw;
+        
+    }
+     .s-comment-title{
+    font-size: 1.6rem;
+    margin: 10px 0;
+  }
+  #new_comment{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  #comment_content{
+    flex: 7 1 0;
+    height: 40px;
+    border: 1px solid gray;
+  }
+  .confirm{
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    flex: 1 1 0;
+    height: 40px;
+    border: 1px solid #E10050;
+  }
+  .confirm input{
+    color: #E10050;
+    font-size: 1.4rem;
+  }
+  .comment_list{
+    font-size: 1.5rem;
+    margin-top: 2rem;
+    height: 40px;
+  }
+  .comment_item {
+    display: flex;
+    justify-content: space-between;
+    margin: 10px;
+    padding: 10px;
+    border-bottom: 1px solid #E10050;
+  }
+
+    .post_detail{
+        height: 40%;
+        
+    }   
+    .comment_cre{
+            width: 30%;
+    }
+    .card-action{
+        text-align:center !important;
+    }

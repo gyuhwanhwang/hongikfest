@@ -1,0 +1,73 @@
+.brand-logo img{
+    width: 30vw;
+}
+
+
+/*모바일부터 했습니다!-현준*/
+@media(max-width: 600px){
+    
+    
+    .brand-logo img{width: 60vw;}
+    .collection{}
+    .collection-item{margin: 5% 5%;}
+    
+    #materialize-overrides .title_sub{
+    border-radius: 80px;
+    padding: 0 5vw;
+    margin: 3vw 0 3vw 2vw;
+    }    
+
+    #materialize-overrides .title{
+    margin-top: 5vw;
+    }    
+    .secondary-content{
+/*    font-size: 1em;*/
+    }
+    
+    #materialize-overrides .pagination{
+    margin-top: 15vw;        
+    }
+    
+    #materialize-overrides .material-icons{
+        margin-top: 1vw;
+        font-size: 26px;
+    }
+    
+    #materialize-overrides .cancel{
+        margin-left: 49vw;
+    }
+    
+    #materialize-overrides .heart{
+        margin-left: 12vw;
+    }
+    
+/*    message_detail*/
+    #materialize-overrides .problem{
+        margin-left: 53vw;
+    }
+    #materialize-overrides .delete{
+        margin-left: 46vw;
+    }
+    
+/*    index*/
+    #materialize-overrides .index{
+        height: 30vh;
+        margin-bottom: 0;
+        padding: 0;
+        background-position: center center;
+        background-size: contain;
+    }
+    #materialize-overrides .bgi{background-image:url(./img/index_1.png);}
+    #materialize-overrides .bgi2{background-image:url(./img/index_2.png);}
+    #materialize-overrides .bgi3{background-image:url(./img/index_3.png);}
+    #materialize-overrides .bgi4{background-image:url(./img/index_4.png);}
+    
+    #materialize-overrides .footer_footer{
+        height: 10vh;
+        margin-top: 0;
+        margin-bottom: 0;
+        color: red;
+        background-image: url(./img/navbar_black.png)
+    }
+    
+}

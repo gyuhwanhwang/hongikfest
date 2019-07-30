@@ -1,0 +1,61 @@
+{% extends 'base.html' %}
+{% block title %}
+    {% if type == 'to' %}
+    <title>받은 쪽지함</title>
+    {% elif type == 'from' %}
+    <title>보낸 쪽지함</title>
+    {% endif %}
+{% endblock %}
+
+{% block contents %}
+<style type="text/css">
+ a:visited { color: black; text-decoration: none;}
+ a:hover { color: #E91E63; text-decoration: none;}
+</style>
+<div>
+{% if type == 'to' %}
+<p class="title_sub waves-effect waves-light btn-small pink"><b>받은쪽지함</b></p>
+<div style="margin-right:15px; margin-left:15px;">
+{% for letter in letters %}  
+<ul class="collection">
+    <li class="collection-item avatar">
+        <a href="{% url 'users:letter_detail' letter_id=letter.id %}">
+            <img src="{{ letter.letter_from.profile_image.url }}" alt="" class="circle">
+            <span class="title">from. <b>{{letter.letter_from}}</b></span>
+            <br>
+            <br>
+            <p>{{letter.text}}</p>
+            <p style="color:#969696; text-align:right;">{{letter.created_at}}</p>
+            {% if letter.check_to == True %}
+            <p class="secondary-content" style="color:#E91E63;">확인함</p>
+            {% elif letter.check_to == False %}
+            <p class="secondary-content" style="color:#E91E63;">확인안함</p>
+            {% endif %}
+        </a>
+    </li>
+</ul>
+</div>
+</div>
+{% endfor %}
+{% elif type == 'from' %}
+
+<p style="margin:1rem;"  class="title_sub waves-effect waves-light btn-small pink"><b>보낸쪽지함</b></p>
+{% for letter in letters %}   
+<div style="margin-right:15px; margin-left:15px;">
+<ul class="collection">
+    <li class="collection-item avatar">
+        <a href="{% url 'users:letter_detail' letter_id=letter.id %}">
+            <img src="{{ letter.letter_from.profile_image.url }}" alt="" class="circle">
+            <span class="title">to. <b>{{letter.letter_to}}</b></span>
+            <br>
+            <br>
+            <p>{{letter.text}}</p>
+            <p style="color:#969696; text-align:right;">{{letter.created_at}}</p>
+        </a>
+    </li>
+</ul>
+</div>
+{% endfor %}
+{% endif %}
+{% endblock %}
+

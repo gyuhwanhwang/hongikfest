@@ -1,0 +1,32 @@
+{% extends 'base.html' %}
+{% block title %}
+    <title>마이페이지</title>
+{% endblock %}
+{% block contents %}
+<!--컨텐츠    -->
+<br>
+<div class="row">
+    <div class="col s12 m6">
+      <div class="card">
+        <div class="card-image">
+          <img src="{{ user.profile_image.url }}" width="240px" alt="{{ user.username }}님의 프로필 사진" class="circle">
+          <h4 class="center-align">{{user.username}}</h4>
+          <h6 class="center-align">{{user.name}}</h6>
+        <p class="center-align" style="font-size:50px;"><i class="Large material-icons" style="color:#ef5350;font-size:45px">favorite</i>{{user.userlike_count}}</p>
+        </div>
+        <!--버튼-->
+        <div class="center-align">
+            <a class="title_sub waves-effect waves-light btn-large pink" href="{% url 'users:letter_list' type='to' %}"><b>받은 쪽지함 {{letter_to}}</b></a>
+            <a class="title_sub waves-effect waves-light btn-large pink" href="{% url 'users:letter_list' type='from' %}"><b>보낸 쪽지함 {{letter_from}}</b></a>
+            <a class="title_sub waves-effect waves-light btn-large pink" href="{% url 'users:mypage_update' user.id %}"><b>내정보변경</b></a>
+            <a class="title_sub waves-effect waves-light btn-large pink" href="{% url 'posts:my_post_list' %}"><b>내가 쓴 글 {{user.post_count}}</b></a>
+        </div>
+      </div>
+    </div>
+  </div><br><br><br><br><br><br><br><br>
+</body>
+
+
+
+</html>
+{% endblock %}
